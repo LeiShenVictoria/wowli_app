@@ -1,0 +1,8 @@
+
+{
+  "name": "Wowli - AI-Driven Generative Connection",
+  "description": "An AI-powered cross-generational photo-sharing app designed to bridge the gap between mothers and daughters through shared pet care and emotional coaching.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

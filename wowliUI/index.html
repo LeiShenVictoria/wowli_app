@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Wowli</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#EC9679',
+                        secondary: '#F36D38',
+                        'background-light': '#FDFCFB',
+                        'background-dark': '#12100E',
+                        sage: '#7DC7B0',
+                        'warm-gray': '#8E827E',
+                        'soft-peach': '#FFF5F1',
+                        'card-border': 'rgba(0,0,0,0.04)'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Noto Sans SC', 'sans-serif']
+                    },
+                    animation: {
+                        'wowli-float': 'wowli-float 4s ease-in-out infinite',
+                        'wowli-blink': 'wowli-blink 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        'wowli-float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-6px)' }
+                        },
+                        'wowli-blink': {
+                            '0%, 90%, 100%': { transform: 'scaleY(1)' },
+                            '95%': { transform: 'scaleY(0.1)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+            font-size: 22px;
+        }
+        .fill { font-variation-settings: 'FILL' 1; }
+        body { 
+            -webkit-tap-highlight-color: transparent;
+            font-feature-settings: "palt";
+            letter-spacing: -0.01em;
+        }
+        ::-webkit-scrollbar { display: none; }
+        .ios-blur { backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); }
+        .ios-card { background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 24px -1px rgba(0,0,0,0.02); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-light text-[#1D1D1F] antialiased">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
